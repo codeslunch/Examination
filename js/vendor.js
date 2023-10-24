@@ -12,10 +12,10 @@ class Vendor {
 
 class Profile extends Vendor {
 	constructor(username, email_verified) {
+		super(firstname);
 		this.username = username;
-		this.email_verified;
+		this.email_verified = email_verified;
 	}
 }
 
-const person = new Vendor(1, 6755577, "Mike", "Solana");
-console.log(person);
+const vendor = new Profile("codingwithzain", true);
