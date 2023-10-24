@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 include_once "./connection.php";
 $receivedJson = file_get_contents('php://input');
@@ -13,18 +13,16 @@ $runCode->execute();
 $count = $runCode->rowCount();
 $accountExists = $count > 0;
 
-if($accountExists) {
+if ($accountExists) {
     $account = $runCode->fetch(PDO::FETCH_OBJ);
     $hashedPassword = $account->passkey;
-    if(password_verify($password, $hashedPassword)) {
-        echo "Login Succesful";
+    if (password_verify($password, $hashedPassword)) {
+        echo "Login Succesful\n";
+        $_SESSION['__userkey'] = $email;
+        header("Location: ./backend/dashboard.php");
     } else {
         echo "Incorrect Email address or password";
     }
 } else {
     echo "You don't have an account. You can sign up using this link";
 }
-
-
-
-?>
