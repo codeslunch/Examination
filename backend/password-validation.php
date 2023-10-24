@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once "./connection.php";
 $receivedJson = file_get_contents('php://input');
 $Object = json_decode($receivedJson);
