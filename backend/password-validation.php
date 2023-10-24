@@ -19,7 +19,7 @@ if ($accountExists) {
     if (password_verify($password, $hashedPassword)) {
         echo "Login Succesful\n";
         $_SESSION['__userkey'] = $email;
-        header("Location: ./backend/dashboard.php");
+        header("Location: dashboard.php");
     } else {
         echo "Incorrect Email address or password";
     }
