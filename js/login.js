@@ -21,6 +21,7 @@ if (email && password) {
 		try {
 			const response = await sync();
 			console.log(response);
+			// window.location.href = "./backend/dashboard.php";
 		} catch (error) {
 			console.error(error);
 		}
