@@ -3,6 +3,7 @@ const prev = document.querySelector("#backward");
 const next = document.querySelector("#forward");
 const demo = document.querySelector("#demo");
 let key;
+const yourAnswers = [];
 
 const random__code = function () {
 	const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
@@ -46,12 +47,28 @@ const display__exam = async function () {
 	};
 	display__options();
 
-	const classes = document.getElementsByClassName(`${myCode}`);
-	for (let i = 0; i < classes.length; i++) {
-		classes[i].addEventListener("change", function () {
-			console.log(classes[i].parentElement.textContent);
-		});
-	}
+	const allow_choices = () => {
+		const classes = document.getElementsByClassName(`${myCode}`);
+		for (let i = 0; i < classes.length; i++) {
+			classes[i].addEventListener("change", function () {
+				const check_answers = () => {
+					const yourChoice = this.parentElement.textContent;
+					yourAnswers[key] = {
+						questionId: key,
+						question: handler[key].question,
+						yourChoice,
+						correctAnswer: handler[key].correctAnswer,
+					};
+					const attempted = yourAnswers.filter((answer) => answer !== null);
+					const unAttempted = Number(yourAnswers.length - attempted.length);
+					console.log(yourAnswers);
+				};
+				check_answers();
+			});
+		}
+	};
+
+	allow_choices();
 
 	prev.addEventListener("click", function () {
 		if (key > 0) {
@@ -59,12 +76,7 @@ const display__exam = async function () {
 			demo.innerText = handler[key].question;
 			show__options.innerHTML = "";
 			display__options();
-			const classes = document.getElementsByClassName(`${myCode}`);
-			for (let i = 0; i < classes.length; i++) {
-				classes[i].addEventListener("change", function () {
-					console.log(classes[i].parentElement.textContent);
-				});
-			}
+			allow_choices();
 		}
 	});
 
@@ -75,6 +87,7 @@ const display__exam = async function () {
 			demo.innerText = handler[key].question;
 			show__options.innerHTML = "";
 			display__options();
+			allow_choices();
 		}
 	});
 };
