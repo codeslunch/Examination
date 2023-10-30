@@ -17,7 +17,7 @@ const random__code = function () {
 const myCode = random__code();
 
 const load__exam = async function () {
-	const handler = await fetch("./json/rand.json");
+	const handler = await fetch("./json/db-exam-template-question.json");
 	const response = await handler.json();
 	return response;
 };
@@ -61,7 +61,6 @@ const display__exam = async function () {
 					};
 					const attempted = yourAnswers.filter((answer) => answer !== null);
 					const unAttempted = Number(yourAnswers.length - attempted.length);
-					console.log(yourAnswers);
 				};
 				check_answers();
 			});
@@ -88,6 +87,12 @@ const display__exam = async function () {
 			show__options.innerHTML = "";
 			display__options();
 			allow_choices();
+		} else {
+			// console.log(yourAnswers);
+			const corr = yourAnswers.filter(
+				(answer) => answer.yourChoice === answer.correctAnswer
+			);
+			console.log(corr);
 		}
 	});
 };
