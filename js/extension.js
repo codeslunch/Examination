@@ -36,6 +36,7 @@ const display__exam = async function () {
 			text = document.createTextNode(`${options[i]}`);
 			input.setAttribute("type", "radio");
 			input.setAttribute("name", myCode);
+			input.setAttribute("class", myCode);
 			label.appendChild(input);
 			label.appendChild(text);
 			wrapper.appendChild(label);
@@ -45,12 +46,25 @@ const display__exam = async function () {
 	};
 	display__options();
 
+	const classes = document.getElementsByClassName(`${myCode}`);
+	for (let i = 0; i < classes.length; i++) {
+		classes[i].addEventListener("change", function () {
+			console.log(classes[i].parentElement.textContent);
+		});
+	}
+
 	prev.addEventListener("click", function () {
 		if (key > 0) {
 			key -= 1;
 			demo.innerText = handler[key].question;
 			show__options.innerHTML = "";
 			display__options();
+			const classes = document.getElementsByClassName(`${myCode}`);
+			for (let i = 0; i < classes.length; i++) {
+				classes[i].addEventListener("change", function () {
+					console.log(classes[i].parentElement.textContent);
+				});
+			}
 		}
 	});
 
