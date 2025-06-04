@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "category": "Electronics",
+    "price": 79.99,
+    "stock": 150,
+    "description": "Bluetooth 5.0 over-ear headphones with noise cancellation",
+    "brand": "SoundWave",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+    "specifications": {
+      "battery_life": "20 hours",
+      "weight": "250g",
+      "color": "Black"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Smartphone X12",
+    "category": "Electronics",
+    "price": 599.99,
+    "stock": 80,
+    "description": "5G smartphone with 6.5-inch OLED display",
+    "brand": "TechTrend",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97",
+    "specifications": {
+      "storage": "128GB",
+      "camera": "48MP",
+      "color": "Midnight Blue"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Running Shoes",
+    "category": "Apparel",
+    "price": 89.99,
+    "stock": 200,
+    "description": "Lightweight running shoes with breathable mesh",
+    "brand": "FitPulse",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+    "specifications": {
+      "size_range": "6-12",
+      "material": "Synthetic",
+      "color": "Red"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Coffee Maker",
+    "category": "Home Appliances",
+    "price": 49.99,
+    "stock": 100,
+    "description": "12-cup programmable coffee maker",
+    "brand": "BrewMaster",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1514537099923-4c0fc7c73161",
+    "specifications": {
+      "capacity": "1.8L",
+      "power": "900W",
+      "color": "Stainless Steel"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Gaming Mouse",
+    "category": "Electronics",
+    "price": 39.99,
+    "stock": 120,
+    "description": "Ergonomic mouse with customizable RGB lighting",
+    "brand": "GamePro",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1613146064653-342a2a794ae5",
+    "specifications": {
+      "dpi": "16000",
+      "buttons": 6,
+      "color": "Black"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Backpack",
+    "category": "Accessories",
+    "price": 29.99,
+    "stock": 300,
+    "description": "Water-resistant backpack with laptop compartment",
+    "brand": "TravelLite",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+    "specifications": {
+      "capacity": "25L",
+      "material": "Nylon",
+      "color": "Gray"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Smart Watch",
+    "category": "Electronics",
+    "price": 199.99,
+    "stock": 90,
+    "description": "Fitness tracker with heart rate monitor and GPS",
+    "brand": "FitTech",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12",
+    "specifications": {
+      "display": "1.4-inch AMOLED",
+      "battery_life": "7 days",
+      "color": "Black"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Electric Kettle",
+    "category": "Home Appliances",
+    "price": 34.99,
+    "stock": 140,
+    "description": "1.7L stainless steel kettle with auto shut-off",
+    "brand": "HeatWave",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1571934811356-5b37d93b7b19",
+    "specifications": {
+      "power": "1500W",
+      "material": "Stainless Steel",
+      "color": "Silver"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Wireless Keyboard",
+    "category": "Electronics",
+    "price": 59.99,
+    "stock": 110,
+    "description": "Slim wireless keyboard with quiet keys",
+    "brand": "TypeEasy",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1587829748821-c48c03b1618b",
+    "specifications": {
+      "connectivity": "Bluetooth",
+      "battery": "Rechargeable",
+      "color": "White"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Yoga Mat",
+    "category": "Fitness",
+    "price": 24.99,
+    "stock": 250,
+    "description": "Non-slip yoga mat with carrying strap",
+    "brand": "FlexFit",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1601925267488-c8f2a1f33af0",
+    "specifications": {
+      "thickness": "6mm",
+      "material": "PVC",
+      "color": "Purple"
+    }
+  }
+]
